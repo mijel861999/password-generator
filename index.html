@@ -5,26 +5,54 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator - Mijel</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="app">
       <div class="password-generator-container">
-				<h1 class="title">Password Generator</h1>
-				<div class="password-output-container">
-					<h3>P4$3jfsdkj</h3>
-					<button>copy</button>		
-				</div>
-				<div class="password-configuration-container">
-					<div class="password-length-info">
-						<h3>Character Length</h3>
-						<h3>0</h3>
+        <h1 class="title">Password Generator</h1>
+        <div class="password-output-container">
+          <h3>Generate your password</h3>
+          <button id="button-copy-password">copy</button>
+        </div>
+        <div class="password-configuration-container">
+          <div class="password-length-info">
+            <h3>Character Length</h3>
+            <h3 id="password-length">5</h3>
+          </div>
+          <input id="range" class="range-input" type="range" value="5" min="5" max="11" />
+          <div class="input-container">
+            <input id="uppercase-checkbox" type="checkbox" />
+            <h2>Include Uppercase Letters</h2>
+          </div>
+          <div class="input-container">
+            <input id="lowercase-checkbox" type="checkbox" />
+            <h2>Include Lowercase Letters</h2>
+          </div>
+          <div class="input-container">
+            <input id="numbers-checkbox" type="checkbox" />
+            <h2>Include Numbers</h2>
+          </div>
+          <div class="input-container">
+            <input id="symbols-checkbox" type="checkbox" />
+            <h2>Include Symbols</h2>
+          </div>
+
+					<div class="output-strength-container">
+						<h2>STRENGTH</h2>
+						<div>
+							4
+						</div>
 					</div>
-					<input id="range" class="range-input" type="range" min="5" max="11">
-				</div>
-			</div>
+
+					<button id="button-generate-password">Go</button>
+        </div>
+      </div>
     </div>
     <script type="module" src="./scripts/PasswordApp.js"></script>
   </body>

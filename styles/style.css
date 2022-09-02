@@ -87,3 +87,34 @@ html {
 .range-input {
 	width: 100%;
 }
+
+.input-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 10px 0px;
+}
+
+.input-container h2 {
+	font-size: 1.6rem;
+	margin-left: 10px;
+}
+
+.input-container input[type='checkbox'] {
+	width: 20px;
+	height: 20px;
+}
+
+.output-strength-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 20px 0px;
+	font-size: 1.2rem;
+}
+
+.password-configuration-container button {
+	height: 50px;
+	width: 100%;
+	margin: 10px 0px;
+}
