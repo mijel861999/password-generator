@@ -129,3 +129,12 @@ html {
 	margin: 0px 5px;
 	background: var(--white);
 }
+
+.button {
+	padding: 10px;
+	border-radius: 8px;
+	border: none;
+	background: var(--white);
+	font-weight: bold;
+	cursor: pointer;
+}
