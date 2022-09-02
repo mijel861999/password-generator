@@ -26,6 +26,7 @@ const symbolsCheckbox = document.getElementById("symbols-checkbox");
 const range = document.getElementById("range");
 
 const passwordLength = document.getElementById("password-length");
+const passwordValue = document.getElementById("password");
 
 // EVENTS LISTENERS
 
@@ -37,17 +38,21 @@ buttonGeneratePassword.addEventListener("click", () => {
 
   delete options.password;
 
-  generatePassword(options);
+  state.password = generatePassword(options);
+	passwordValue.innerHTML = state.password
 });
 
-buttonCopyPassword.addEventListener("click", () => {});
+buttonCopyPassword.addEventListener("click", () => {
+	if( navigator && navigator.clipboard && navigator.clipboard.writeText )
+		return navigator.clipboard.writeText(state.password)
+	return Promise.reject('The clipboard API is not available')
+});
 
 // RANGE
 
 range.addEventListener("input", () => {
   passwordLength.innerHTML = range.value;
   state.characterLenght = range.value;
-  console.log(state);
 });
 
 // CHECKBOX
