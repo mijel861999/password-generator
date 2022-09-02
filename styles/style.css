@@ -118,3 +118,14 @@ html {
 	width: 100%;
 	margin: 10px 0px;
 }
+
+.rectangle-container {
+	display: flex;
+}
+
+.rectangle {
+	width: 10px;
+	height: 30px;
+	margin: 0px 5px;
+	background: var(--white);
+}
