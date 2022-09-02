@@ -10,10 +10,10 @@
 
 :root {
   --black: #323233;
-	--white: #FFFFFF;
-	--grey: #B1B1B1;
-	--blue: #0066CC;
-	--red: #CD262C;
+  --white: #ffffff;
+  --grey: #b1b1b1;
+  --blue: #0066cc;
+  --red: #cd262c;
 }
 
 * {
@@ -24,43 +24,66 @@
 
 body,
 html {
-	background: black;
+  background: black;
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
 }
 
 #app {
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin: 15px 0px;
+  font-size: 1.8rem;
+  color: var(--grey);
 }
 
 .password-generator-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	min-width: 300px;
-	max-width: 500px;
-	margin: auto;
-	padding: 10px 20px; 
-	color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px 20px;
+  color: var(--white);
 }
 
 .password-output-container {
-	width: 100%;
-	display:flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 10px 0px;
-	padding: 15px;
-	font-size: 1.6rem;
-	color: var(--grey);
-	background: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 15px;
+  font-size: 1.6rem;
+  color: var(--grey);
+  background: var(--black);
 }
 
 .password-configuration-container {
-	background: var(--black);
+  width: 100%;
+  padding: 15px;
+	margin: 15px 0px;
+  background: var(--black);
+}
+
+.password-length-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.range-input {
+	width: 100%;
 }

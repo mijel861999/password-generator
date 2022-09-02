@@ -12,13 +12,17 @@
   <body>
     <div id="app">
       <div class="password-generator-container">
-				<h1>Password Generator</h1>
+				<h1 class="title">Password Generator</h1>
 				<div class="password-output-container">
 					<h3>P4$3jfsdkj</h3>
 					<button>copy</button>		
 				</div>
 				<div class="password-configuration-container">
-					<input type="range" min="5" max="11">
+					<div class="password-length-info">
+						<h3>Character Length</h3>
+						<h3>0</h3>
+					</div>
+					<input id="range" class="range-input" type="range" min="5" max="11">
 				</div>
 			</div>
     </div>
