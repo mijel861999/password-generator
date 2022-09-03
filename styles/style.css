@@ -38,9 +38,17 @@ html {
 }
 
 .title {
-  margin: 15px 0px;
-  font-size: 1.8rem;
-  color: var(--grey);
+  margin: 10px 0px;
+  font-size: 3rem;
+  color: var(--white);
+	font-weight: black;
+}
+
+.subtitle {
+	font-size: 1.5rem;
+	text-align: center;
+	color: var(--grey);
+	margin-bottom: 10px;
 }
 
 .password-generator-container {
@@ -57,6 +65,7 @@ html {
 }
 
 .password-output-container {
+	
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,9 +75,11 @@ html {
   font-size: 1.6rem;
   color: var(--grey);
   background: var(--black);
+	border-radius: 10px;
 }
 
 .password-configuration-container {
+	border-radius: 10px;
   width: 100%;
   padding: 15px;
 	margin: 15px 0px;
@@ -79,9 +90,14 @@ html {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 15px;
+	margin: 20px 0px;
 	font-size: 1.4rem;
 	font-weight: 500;
+}
+
+.password-length-info h3 {
+	font-size: 2.4rem;
+	font-weight: bold;
 }
 
 .range-input {
@@ -92,12 +108,12 @@ html {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	margin: 10px 0px;
+	margin: 20px 0px;
 }
 
 .input-container h2 {
-	font-size: 1.6rem;
-	margin-left: 10px;
+	font-size: 1.8rem;
+	margin-left: 17px;
 }
 
 .input-container input[type='checkbox'] {
@@ -121,6 +137,7 @@ html {
 
 .rectangle-container {
 	display: flex;
+	height: 30px;
 }
 
 .rectangle {
@@ -134,7 +151,19 @@ html {
 	padding: 10px;
 	border-radius: 8px;
 	border: none;
-	background: var(--white);
+	background: var(--blue);
+	color: var(--white);
 	font-weight: bold;
 	cursor: pointer;
+}
+
+.button:hover {
+	transition: background-color 0.3s ease;
+	background: var(--white);
+	color: var(--black);
+}
+
+.button-copy {
+	background-color: var(--red);
+	color: var(--white);
 }
