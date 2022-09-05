@@ -16,10 +16,15 @@
     <div id="app">
       <div class="password-generator-container">
         <h1 class="title">Passing</h1>
-				<p class="subtitle">Tu generador de contraseñas de confianza, crea las contraseñas más seguras con nosotros.</p>
+        <p class="subtitle">
+          Tu generador de contraseñas de confianza, crea las contraseñas más
+          seguras con nosotros.
+        </p>
         <div class="password-output-container">
           <h3 id="password">Generate your password</h3>
-          <button id="button-copy-password" class="button button-copy">Copy</button>
+          <button id="button-copy-password" class="button button-copy">
+            Copy
+          </button>
         </div>
         <div class="password-configuration-container">
           <div class="password-length-info">
@@ -53,14 +58,15 @@
 
           <div class="output-strength-container">
             <h2>STRENGTH</h2>
-            <div id="rectangle-container" class="rectangle-container">	
-            </div>
+            <div id="rectangle-container" class="rectangle-container"></div>
           </div>
 
           <button class="button" id="button-generate-password">Go</button>
         </div>
       </div>
     </div>
+
+    <div id="copy-alert-container" class="copy-alert-container">Copiado</div>
     <script type="module" src="./scripts/PasswordApp.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 import "../styles/style.css";
 import generatePassword from "./generatePassword";
-import {createRectangles, removeRectangles} from "./createRectangles"
+import { createRectangles, removeRectangles } from "./createRectangles";
 
 // STATE
 
@@ -30,6 +30,7 @@ const range = document.getElementById("range");
 const passwordLength = document.getElementById("password-length");
 const passwordValue = document.getElementById("password");
 
+const copyContainer = document.getElementById("copy-alert-container");
 
 // EVENTS LISTENERS
 
@@ -46,8 +47,11 @@ buttonGeneratePassword.addEventListener("click", () => {
 });
 
 buttonCopyPassword.addEventListener("click", () => {
-  if (navigator && navigator.clipboard && navigator.clipboard.writeText)
+  if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+    copyContainer.style.display = "flex";
+
     return navigator.clipboard.writeText(state.password);
+  }
   return Promise.reject("The clipboard API is not available");
 });
 
@@ -63,10 +67,10 @@ range.addEventListener("input", () => {
 uppercaseCheckbox.addEventListener("change", () => {
   if (uppercaseCheckbox.checked) {
     state.securityNumber = state.securityNumber + 1;
-		createRectangles(state.securityNumber)
+    createRectangles(state.securityNumber);
   } else {
     state.securityNumber = state.securityNumber - 1;
-		removeRectangles()
+    removeRectangles();
   }
 
   state.hasUppercase = !state.hasUppercase;
@@ -75,10 +79,10 @@ uppercaseCheckbox.addEventListener("change", () => {
 lowercaseCheckbox.addEventListener("change", () => {
   if (lowercaseCheckbox.checked) {
     state.securityNumber = state.securityNumber + 1;
-		createRectangles(state.securityNumber)
+    createRectangles(state.securityNumber);
   } else {
     state.securityNumber = state.securityNumber - 1;
-		removeRectangles()
+    removeRectangles();
   }
 
   state.hasLowercase = !state.hasLowercase;
@@ -87,10 +91,10 @@ lowercaseCheckbox.addEventListener("change", () => {
 numbersCheckbox.addEventListener("change", () => {
   if (numbersCheckbox.checked) {
     state.securityNumber = state.securityNumber + 1;
-		createRectangles(state.securityNumber)
+    createRectangles(state.securityNumber);
   } else {
     state.securityNumber = state.securityNumber - 1;
-		removeRectangles()
+    removeRectangles();
   }
   state.hasNumbers = !state.hasNumbers;
 });
@@ -98,10 +102,10 @@ numbersCheckbox.addEventListener("change", () => {
 symbolsCheckbox.addEventListener("change", () => {
   if (symbolsCheckbox.checked) {
     state.securityNumber = state.securityNumber + 1;
-		createRectangles(state.securityNumber)
+    createRectangles(state.securityNumber);
   } else {
     state.securityNumber = state.securityNumber - 1;
-		removeRectangles()
+    removeRectangles();
   }
 
   state.hasSymbols = !state.hasSymbols;

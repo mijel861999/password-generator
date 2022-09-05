@@ -8,6 +8,11 @@
 
 */
 
+@keyframes copyAnimation {
+	from { opacity: 1 }
+	to { opacity: 0 }
+}
+
 :root {
   --black: #323233;
   --white: #ffffff;
@@ -24,6 +29,7 @@
 
 body,
 html {
+	position: relative;
   background: black;
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
@@ -166,4 +172,24 @@ html {
 .button-copy {
 	background-color: var(--red);
 	color: var(--white);
+}
+
+.copy-alert-container {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 75px;
+	background: var(--white);
+	font-size: 2rem;
+	border-radius: 15px;
+	animation-name: copyAnimation;
+	animation-duration: 1s;
+	animation-fill-mode: both;
 }
